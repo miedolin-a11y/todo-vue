@@ -187,6 +187,5 @@ export default {
   margin: 0;
   margin-bottom: 1rem;
   font-weight: bold;
-  color: red;
 }
 </style>
