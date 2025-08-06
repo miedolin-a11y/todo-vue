@@ -186,5 +186,6 @@ export default {
   text-align: center;
   margin: 0;
   margin-bottom: 1rem;
+  text-decoration: underline;
 }
 </style>
