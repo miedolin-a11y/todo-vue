@@ -2,6 +2,7 @@
   <div id="app">
     <h1>To-Do List</h1>
     <to-do-form @todo-added="addToDo"></to-do-form>
+    <insurance-form @form-submitted="onInsuranceSubmit"></insurance-form>
     <h2 id="list-summary" ref="listSummary" tabindex="-1">{{ listSummary }}</h2>
     <ul aria-labelledby="list-summary" class="stack-large">
       <li v-for="item in ToDoItems" :key="item.id">
@@ -21,6 +22,7 @@
 <script>
 import ToDoItem from "./components/ToDoItem.vue";
 import ToDoForm from "./components/ToDoForm.vue";
+import InsuranceForm from "./components/InsuranceForm.vue";
 import { nanoid } from "nanoid";
 
 export default {
@@ -28,6 +30,7 @@ export default {
   components: {
     ToDoItem,
     ToDoForm,
+    InsuranceForm,
   },
   data() {
     return {
@@ -44,6 +47,10 @@ export default {
     };
   },
   methods: {
+    onInsuranceSubmit(payload) {
+      console.info("Insurance form submitted", payload);
+      alert("提交成功：" + JSON.stringify(payload));
+    },
     addToDo(toDoLabel) {
       this.ToDoItems.push({
         id: "todo-" + nanoid(),
