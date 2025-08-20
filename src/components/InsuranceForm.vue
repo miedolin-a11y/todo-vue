@@ -41,7 +41,7 @@
       <div class="error" v-if="errors.idNo">{{ errors.idNo }}</div>
     </div>
 
-    <button type="submit" class="btn btn__primary btn__lg submit-btn">提交</button>
+    <button type="submit" class="btn btn__outline-blue btn__lg submit-btn">提交</button>
   </form>
   
 </template>
@@ -138,6 +138,19 @@ input {
 }
 .submit-btn {
   margin-top: 1rem;
+}
+
+/* 蓝色线框按钮样式 */
+.btn__outline-blue {
+  color: #1677ff;
+  background-color: transparent;
+  border-color: #1677ff;
+}
+.btn__outline-blue:hover {
+  background-color: rgba(22, 119, 255, 0.06);
+}
+.btn__outline-blue:focus {
+  outline-color: #1677ff;
 }
 </style>
 
